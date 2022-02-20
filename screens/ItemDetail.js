@@ -115,7 +115,7 @@ const ItemDetail = ({ route, navigation }) => {
 
                         <View style={{ flex: 1.5, alignItems: 'flex-end', justifyContent: 'flex-end' }}>
                             <Text style={{ color: COLORS.darkGreen, ...FONTS.h3 }}>
-                                $ {itemInfo.price.toFixed(2)}
+                                {itemInfo.price.toFixed(2)} €
                             </Text>
                         </View>
                     </View>
@@ -128,7 +128,7 @@ const ItemDetail = ({ route, navigation }) => {
                             right: SIZES.padding
                         }}
                     >
-                        <Text style={{ color: COLORS.lightGray2, ...FONTS.body2 }}>Furniture</Text>
+                        <Text style={{ color: COLORS.lightGray2, ...FONTS.body2 }}>Meuble</Text>
                         <Text style={{ marginTop: SIZES.radius, color: COLORS.white, ...FONTS.h1 }}>{itemInfo.productName}</Text>
                     </View>
                 </ImageBackground>

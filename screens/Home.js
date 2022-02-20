@@ -57,12 +57,12 @@ const ScrollableCard = ({ navigation, productList }) => {
                 />
 
                 <View style={{ position: 'absolute', top: 15, left: '10%', right: '10%' }}>
-                    <Text style={{ color: COLORS.lightGray2, ...FONTS.h3 }}>Furniture</Text>
+                    <Text style={{ color: COLORS.lightGray2, ...FONTS.h3 }}>Meuble</Text>
                     <Text style={{ marginTop: SIZES.base, color: COLORS.white, ...FONTS.h2 }}>{item.productName}</Text>
                 </View>
 
                 <View style={{ position: 'absolute', bottom: 20, left: 30, borderRadius: 15, paddingVertical: 10, paddingHorizontal: 15, backgroundColor: COLORS.transparentLightGray }}>
-                    <Text style={{ ...FONTS.h2 }}>$ {item.price.toFixed(2)}</Text>
+                    <Text style={{ ...FONTS.h2 }}>{item.price.toFixed(2)} €</Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -86,8 +86,8 @@ const Home = ({ navigation }) => {
     const [tabList, setTabList] = React.useState([
         {
             id: 0,
-            name: "Chair",
-            title: "chairs",
+            name: "Chaise",
+            title: "de chaises",
             productList: [
                 {
                     productId: 1,
@@ -111,8 +111,8 @@ const Home = ({ navigation }) => {
         },
         {
             id: 1,
-            name: "Cupboard",
-            title: 'cupboards',
+            name: "Armoire",
+            title: 'd\'armoire',
             productList: [
                 {
                     productId: 4,
@@ -138,7 +138,7 @@ const Home = ({ navigation }) => {
         {
             id: 2,
             name: "Table",
-            title: 'tables',
+            title: 'de tables',
             productList: [
                 {
                     productId: 7,
@@ -163,8 +163,8 @@ const Home = ({ navigation }) => {
         },
         {
             id: 3,
-            name: "Accessories",
-            title: 'accessories',
+            name: "Accessoires",
+            title: 'd\'accessoires',
             productList: [
                 {
                     productId: 10,
@@ -191,24 +191,24 @@ const Home = ({ navigation }) => {
 
     const [selectedTab, setSelectedTab] = React.useState({
         id: 0,
-        name: "Chair",
-        title: 'chairs',
+        name: "Chaise",
+        title: 'de chaises',
         productList: [
             {
                 productId: 1,
-                productName: 'Chair Green Colour',
+                productName: 'Chaise Couleur Verte',
                 price: 10.00,
                 image: images.greenChair,
             },
             {
                 productId: 2,
-                productName: 'Chair Peach Colour',
+                productName: 'Chaise Couleur Pêche',
                 price: 10.00,
                 image: images.redChair,
             },
             {
                 productId: 3,
-                productName: 'Chair White Colour',
+                productName: 'Chaise Couleur Blanche',
                 price: 10.00,
                 image: images.whiteChair,
             },
@@ -259,7 +259,7 @@ const Home = ({ navigation }) => {
     function renderTitle(title) {
         return (
             <View style={{ marginTop: SIZES.padding, marginHorizontal: SIZES.padding }}>
-                <Text style={{ color: COLORS.black, ...FONTS.largeTitle }}>Collection of</Text>
+                <Text style={{ color: COLORS.black, ...FONTS.largeTitle }}>Collection</Text>
                 <Text style={{ color: COLORS.black, ...FONTS.largeTitle }}>{title}</Text>
             </View>
         )
@@ -298,8 +298,8 @@ const Home = ({ navigation }) => {
 
                 {/* Wordings section */}
                 <View style={{ flex: 1, marginLeft: SIZES.radius, justifyContent: 'center' }}>
-                    <Text style={{ ...FONTS.h2 }}>Special Offer</Text>
-                    <Text style={{ ...FONTS.body3 }}>Adding to your cart</Text>
+                    <Text style={{ ...FONTS.h2 }}>Offre spéciale</Text>
+                    <Text style={{ ...FONTS.body3 }}>Ajouter au panier</Text>
                 </View>
 
                 {/* Button */}
